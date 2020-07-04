@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Controller
 @RequestMapping("/catalog")
 public class CatalogController {
@@ -17,7 +14,6 @@ public class CatalogController {
 
   CatalogController(CatalogService catalogService) {
     this.catalogService = catalogService;
-    log.info("trying this again?");
   }
 
   @GetMapping()
