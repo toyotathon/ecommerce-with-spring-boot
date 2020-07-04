@@ -17,10 +17,11 @@ public class CatalogController {
 
   CatalogController(CatalogService catalogService) {
     this.catalogService = catalogService;
+    log.info("trying this again?");
   }
 
   @GetMapping()
   ModelAndView index() {
-    return new ModelAndView("catalog", Map.of("items", ItemUtils.getBaseItems()));
+    return new ModelAndView("catalog", Map.of("items", this.catalogService.getItems()));
   }
 }

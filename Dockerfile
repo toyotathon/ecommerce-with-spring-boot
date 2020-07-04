@@ -1,6 +1,6 @@
 FROM openjdk:11
 VOLUME /tmp
-EXPOSE 8082
+EXPOSE 8081
 RUN mkdir -p /app/
 RUN mkdir -p /app/logs/
 ADD target/app-0.0.1-SNAPSHOT.jar /app/app.jar
