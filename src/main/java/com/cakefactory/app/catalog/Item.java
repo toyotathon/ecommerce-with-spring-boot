@@ -2,8 +2,8 @@ package com.cakefactory.app.catalog;
 
 import java.math.BigDecimal;
 
-// import javax.persistence.Entity;
-// import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -13,9 +13,9 @@ import lombok.RequiredArgsConstructor;
 @Data
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
-// @Entity
+@Entity
 public class Item {
-  // @Id
+  @Id
   final private String title;
   final private BigDecimal price;
 }

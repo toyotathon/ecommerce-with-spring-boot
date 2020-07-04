@@ -13,11 +13,14 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @RequestMapping("/catalog")
 public class CatalogController {
-  // private final CatalogService catalogService;
+  private final CatalogService catalogService;
+
+  CatalogController(CatalogService catalogService) {
+    this.catalogService = catalogService;
+  }
 
   @GetMapping()
   ModelAndView index() {
-    log.info(ItemUtils.getBaseItems().toString());
     return new ModelAndView("catalog", Map.of("items", ItemUtils.getBaseItems()));
   }
 }
